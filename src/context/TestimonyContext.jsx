@@ -9,10 +9,19 @@ export const TestimonyProvider = ({children}) => {
     const openModal = () => {
         setModal(true)
     }
+    const closeModal = () => {
+        setModal(false)
+    }
 
     return <TestimonyContext.Provider value={{
+        modal,
+        openModal,
+        closeModal
 
     }}>
-
+        {children}
     </TestimonyContext.Provider>
 }
+
+
+export default TestimonyContext

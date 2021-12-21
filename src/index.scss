@@ -17,6 +17,9 @@ body {
   background-color: #ffffff;
   line-height: 1.6;
 }
+.active-modal {
+  overflow-y: hidden;
+}
 .container {
   width: 85%;
   margin: 0 auto;
@@ -236,18 +239,31 @@ header {
   }
 }
 
+.overlay {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #0000007a;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
 .card-container {
   max-width: 700px;
   margin: auto;
   padding: 0 20px;
+  z-index: 4;
 }
 .card {
   background-color: #ffffff;
   color: #333;
   border-radius: 15px;
   padding: 40px 50px;
-  margin: 2em auto;
-  position: relative;
+  margin: 0.5em auto;
+  z-index: 6;
 
   h1 {
     text-align: center;

@@ -3,17 +3,20 @@ import './index.scss';
 import Home from './pages/Home';
 import ThankYou from './pages/ThankYou';
 import AddTestimonial from './pages/AddTestimonial';
+import { TestimonyProvider } from './context/TestimonyContext';
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element ={<Home/>} />
-        <Route path="/addtestimonial" element ={<AddTestimonial />} />
-        <Route path="/thanks" element ={<ThankYou />} />
-      </Routes>
-    </BrowserRouter>
+    <TestimonyProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element ={<Home/>} />
+          <Route path="/addtestimonial" element ={<AddTestimonial />} />
+          <Route path="/thanks" element ={<ThankYou />} />
+        </Routes>
+      </BrowserRouter>
+    </TestimonyProvider>
   );
 }
 
