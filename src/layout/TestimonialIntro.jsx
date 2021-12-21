@@ -9,7 +9,7 @@ const TestimonialIntro = () => {
         <div className="intro-test">
             <div className="container intro">
             <img src={girls} alt="" />
-            <div>
+            <div className="content">
                 <h2>Tolu & Joy’s Experience</h2>
                 <p className="badge">customer</p>
                 <p>I had the best experience shopping with vasiti. Usability of the website was great, very good customer service, an all round great experience. I would definately be coming back! I had the best experience shopping with vasiti. Usability of the website was great, very good customer service, an all round great experience. I would definately be coming back!</p>

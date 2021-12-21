@@ -4,8 +4,9 @@ import iphone from ".././assets/iphone.svg"
 const Footer = () => {
     return (
         <footer>
+            <div className="container">
             <div className="iphone">
-                <img src={iphone} alt="" />
+                <img src={iphone} className="phone" alt="" />
                 <div className="opt-in">
                     <div>
                         <h2>Be a member <br></br>of our community 🎉</h2>
@@ -16,8 +17,8 @@ const Footer = () => {
                     
                 </div>
             </div>
-            <div className="row-2">
-                <div className="row5 container">
+            <div className="row2">
+                <div className="rows container">
                 <div className="footer-menu">
                         <h3>Company</h3>
                         <ul>
@@ -63,6 +64,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
+            </div>
             </div>
         </footer>
     )

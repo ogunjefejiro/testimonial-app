@@ -24,6 +24,7 @@ body {
   width: 85%;
   margin: 0 auto;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -109,6 +110,7 @@ header {
       font-family: inter;
       font-weight: 500;
     }
+
     p {
       margin: 2em 0;
       padding-right: 3em;
@@ -146,6 +148,10 @@ header {
   gap: 5em;
 
   .testimony {
+    .avatar {
+      width: 200px;
+      border-radius: 50%;
+    }
     h3 {
       margin-top: 1em;
       font-family: inter;
@@ -155,6 +161,7 @@ header {
     .city {
       display: inline;
       color: #474747;
+      margin-right: 1.2em;
     }
     .badge {
       display: inline;
@@ -166,7 +173,10 @@ header {
       font-family: inter;
       font-weight: 500;
       background-color: #eef8ff;
-      margin-left: 1.2em;
+    }
+    .vendor {
+      background-color: #f0ffee;
+      color: #049a01;
     }
     p {
       margin-top: 2em;
@@ -209,6 +219,7 @@ header {
       font-family: inter;
       font-weight: 500;
     }
+
     p {
       margin: 2em 0;
       padding-right: 3em;
@@ -251,6 +262,7 @@ header {
   right: 0;
   left: 0;
   z-index: 2;
+  overflow: auto;
 }
 .card-container {
   max-width: 700px;
@@ -282,6 +294,21 @@ header {
     border-radius: 8px;
     padding: 0.8em 2em;
     margin: 0.5em 0 1.5em 0;
+    .hide {
+      display: none;
+    }
+    .choose {
+      font-size: 0.9rem;
+      font-family: roboto;
+      font-weight: 400;
+    }
+    .custom-file {
+      cursor: pointer;
+
+      &::-webkit-file-upload-button {
+        display: none;
+      }
+    }
   }
   .two-cols {
     display: grid;
@@ -308,6 +335,13 @@ header {
     label {
       margin: 0.5em 0;
     }
+  }
+  input,
+  textarea {
+    font-size: 1rem;
+    font-family: roboto;
+    font-weight: 500;
+    color: #4a4a4a;
   }
   input:focus,
   textarea:focus {
@@ -356,6 +390,10 @@ footer {
     display: flex;
     justify-content: space-evenly;
 
+    .phone {
+      //max-width: 430px;
+    }
+
     .opt-in {
       display: flex;
       align-items: center;
@@ -386,14 +424,14 @@ footer {
       }
     }
   }
-  .row-2 {
+  .row2 {
     font-size: 1rem;
     padding: 4em 0;
     background: #25201d;
     color: white;
     border: 1px solid #0000001a;
 
-    .row5 {
+    .rows {
       display: grid;
       grid-template-columns: auto auto auto auto auto;
 
@@ -432,6 +470,159 @@ footer {
           color: white;
           margin-top: 0;
           margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  nav {
+    display: none;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2em;
+    padding-bottom: 0;
+
+    img {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 0.6rem;
+      margin-bottom: 2em;
+    }
+  }
+
+  .intro-test,
+  .vendor-test {
+    padding-top: 2em;
+    margin: auto;
+    .intro {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1em;
+      margin: auto;
+
+      .content {
+        padding: 1em 0 3em 0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        padding-right: 0;
+      }
+      .cta {
+        font-weight: 500;
+      }
+      .cta::after {
+        content: "";
+        position: absolute;
+        width: 14em;
+        height: 1em;
+        background: url("./assets/line.svg") no-repeat;
+        top: 1em;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .vendor-test {
+    padding-bottom: 3em;
+
+    .intro {
+      h2 {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .testimony-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer {
+    .iphone {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .phone {
+        width: 100%;
+      }
+
+      .opt-in {
+        margin: 3em 0;
+        h2 {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .row2 {
+      font-size: 1rem;
+      padding: 4em 0;
+      background: #25201d;
+      color: white;
+      border: 1px solid #0000001a;
+
+      .rows {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .footer-menu {
+          margin-bottom: 1em;
+          color: white;
+          .social {
+            display: flex;
+            align-items: center;
+            p {
+              margin: 0;
+            }
+          }
+          .logo img {
+            margin-bottom: 0.8em;
+          }
+          .foot {
+            width: 7%;
+            margin: 0;
+            margin-right: 0.2em;
+          }
+          li {
+            margin-bottom: 0.5em;
+            list-style: none;
+          }
+          a {
+            color: white;
+            font-size: 0.9rem;
+            font-family: roboto;
+            font-weight: 400;
+            text-decoration: none;
+          }
+          h3 {
+            font-family: roboto;
+            font-weight: 700;
+            color: white;
+            margin-top: 0;
+            margin-bottom: 1em;
+          }
         }
       }
     }

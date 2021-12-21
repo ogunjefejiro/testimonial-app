@@ -1,11 +1,11 @@
 import Card from "../components/Card"
-import {FaPaperclip} from "react-icons/fa"
+import {FaPaperclip, FaTimes} from "react-icons/fa"
 import { useContext, useState } from "react"
 import TestimonyContext from "../context/TestimonyContext"
 import DataContext from "../context/DataContext"
 
 const AddTestimonial = () => {
-    const [avatar, setAvatar] = useState("")
+    const [avatar, setAvatar] = useState(null)
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [city, setCity] = useState("")
@@ -26,14 +26,26 @@ const AddTestimonial = () => {
         setType(e.currentTarget.value)
     }
 
+    const onImageChange = (e) => {
+        if (e.target.files && e.target.files[0]) {
+            setAvatar(URL.createObjectURL(e.target.files[0]));
+          }
+    }
+
+    const handleDelete = () => {
+        setAvatar(null)
+    }
+
+
     return (
         <Card>
             <h1>Share your amazing story!</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="">Upload your picture</label>
                 <div className="two-cols attachment form-input">
-                    <input type="file"  />
-                    <FaPaperclip/>
+                    <input type="file" title="" className={`custom-file ${avatar==null && "hide"}`} id="files" onChange={onImageChange} />
+                    {avatar == null ? <label htmlFor="files" className="choose">Choose Image</label>: ""}
+                    {avatar === null ? <FaPaperclip/> : <FaTimes onClick={handleDelete}/>}
                 </div>
                 <div className="two-cols">
                     <div>
