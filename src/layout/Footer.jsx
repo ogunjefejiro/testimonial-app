@@ -18,7 +18,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="row2">
-                <div className="rows container">
+                <div className="rows">
                 <div className="footer-menu">
                         <h3>Company</h3>
                         <ul>
