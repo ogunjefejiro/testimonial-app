@@ -1,7 +1,6 @@
 import girls from "../assets/girls.png"
 import { useContext } from "react"
 import TestimonyContext from "../context/TestimonyContext"
-import Testimony from "./Testimony"
 
 const TestimonialIntro = () => {
 

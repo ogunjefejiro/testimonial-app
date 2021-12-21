@@ -1,15 +1,12 @@
 import Testimony from "./Testimony"
-import VendorTestimonial from "./VendorTestimonial"
+import { useContext } from "react"
+import DataContext from "../context/DataContext"
+
 const TestimonialContainer = () => {
+    const {testimononial} = useContext(DataContext)
     return (
         <div className="testimony-container container">
-            <Testimony/>
-            <Testimony/>
-            <Testimony/>
-            <Testimony/>
-            <Testimony/>
-            <Testimony/>
-
+            {testimononial.map((testimony) => <Testimony key={testimony.id} testimony={testimony}/>)}
         </div>
     )
 }

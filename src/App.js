@@ -4,10 +4,12 @@ import Home from './pages/Home';
 import ThankYou from './pages/ThankYou';
 import AddTestimonial from './pages/AddTestimonial';
 import { TestimonyProvider } from './context/TestimonyContext';
+import { DataProvider } from './context/DataContext';
 
 
 function App() {
   return (
+    <DataProvider>
     <TestimonyProvider>
       <BrowserRouter>
         <Routes>
@@ -17,6 +19,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </TestimonyProvider>
+    </DataProvider>
   );
 }
 

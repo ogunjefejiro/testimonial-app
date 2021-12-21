@@ -9,27 +9,28 @@ import UserTestimonialContainer from "../layout/UserTestimonialContainer"
 import { useContext } from "react"
 import TestimonyContext from "../context/TestimonyContext"
 import AddTestimonial from "./AddTestimonial"
+import ThankYou from "./ThankYou"
 
 
 
 const Home = () => {
 
-const {modal} = useContext(TestimonyContext) 
+const {modal, greeting} = useContext(TestimonyContext) 
 
-    if(modal) {
+    if(modal || greeting) {
         document.body.classList.add("active-modal")
     } else {
         document.body.classList.remove("active-modal")
     }
-    
+
     return (
         <>
-
+        {modal && <AddTestimonial/>}
+        {greeting && <ThankYou/>}
             <Navbar />
             <Hero />
             <TestimonialIntro />
             <TestimonialContainer />
-            {modal && <AddTestimonial/>}
             <VendorTestimonial/>
             <UserTestimonialContainer/>
             <Footer />
