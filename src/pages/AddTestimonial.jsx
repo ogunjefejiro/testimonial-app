@@ -48,7 +48,7 @@ const AddTestimonial = () => {
             <form onSubmit={handleSubmit}>
                 <label htmlFor="">Upload your picture</label>
                 <div className="two-cols attachment form-input">
-                    <input type="file" title="" className={`custom-file ${avatar==null && "hide"}`} id="files" onChange={onImageChange} />
+                    <input type="file" title="" accept="image/*" className={`custom-file ${avatar==null && "hide"}`} id="files" onChange={onImageChange} />
                     {avatar == null ? <label htmlFor="files" className="choose">Choose Image</label>: ""}
                     {avatar === null ? <FaPaperclip/> : <FaTimes className="curs" onClick={handleDelete}/>}
                 </div>
