@@ -124,7 +124,7 @@ export const DataProvider = ({children}) => {
     const addTestimony = (test) => {
         const id = uuidv4()
         const newTestimony = {...test, id}
-        setTestimony([...testimony, newTestimony])
+        setTestimony([newTestimony, ...testimony])
         console.log(newTestimony)
     }
 

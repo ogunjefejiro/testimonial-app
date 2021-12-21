@@ -17,9 +17,14 @@ const AddTestimonial = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        openGreeting()
+        if(avatar === null || firstName === "" || lastName === "" || type === "" || text === "") {
+            window.alert("Please fill in the required fields")
+        } else {
+            openGreeting()
+            addTestimony({avatar,firstName,lastName,city,type,text})
+        }
 
-        addTestimony({avatar,firstName,lastName,city,type,text})
+        
     }
 
     const handleChange = (e) => {

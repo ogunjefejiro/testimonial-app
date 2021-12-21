@@ -151,6 +151,7 @@ header {
   .testimony {
     .avatar {
       width: 200px;
+      height: 200px;
       border-radius: 50%;
     }
     h3 {
@@ -632,5 +633,46 @@ footer {
         }
       }
     }
+  }
+  .card-container {
+    padding: 0 10px;
+  }
+  .card {
+    border-radius: 10px;
+    padding: 2em 1em;
+    margin: 1em auto;
+
+    .form-input {
+      padding: 0.8em 1em;
+    }
+
+    .one-col {
+      textarea {
+        resize: none;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+        padding: 0.8em 1em;
+        font-family: roboto;
+      }
+    }
+    .radio {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 1em 0;
+    }
+    .submit {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .thanks {
+    h1 {
+      margin-top: 0.5em;
+    }
+    p {
+      margin-bottom: 4em;
+    }
+    text-align: center;
+    padding: 2em 3em;
   }
 }
