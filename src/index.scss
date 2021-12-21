@@ -127,6 +127,7 @@ header {
       cursor: pointer;
       font-family: inter;
       font-weight: 500;
+      font-size: 1rem;
     }
     .cta::after {
       content: "";
@@ -134,7 +135,7 @@ header {
       width: 14em;
       height: 1em;
       background: url("./assets/line.svg") no-repeat;
-      top: 1em;
+      top: 1.3em;
       right: 0;
       z-index: 1;
     }
@@ -236,6 +237,7 @@ header {
       cursor: pointer;
       font-family: inter;
       font-weight: 500;
+      font-size: 1rem;
     }
     .cta::after {
       content: "";
@@ -243,7 +245,7 @@ header {
       width: 14em;
       height: 1em;
       background: url("./assets/line.svg") no-repeat;
-      top: 1em;
+      top: 1.3em;
       right: 0;
       z-index: 1;
     }
@@ -301,6 +303,9 @@ header {
       font-size: 0.9rem;
       font-family: roboto;
       font-weight: 400;
+    }
+    .curs {
+      cursor: pointer;
     }
     .custom-file {
       cursor: pointer;
@@ -391,7 +396,7 @@ footer {
     justify-content: space-evenly;
 
     .phone {
-      //max-width: 430px;
+      margin-top: -2em;
     }
 
     .opt-in {
@@ -567,6 +572,7 @@ footer {
 
       .phone {
         width: 100%;
+        margin-top: 0;
       }
 
       .opt-in {

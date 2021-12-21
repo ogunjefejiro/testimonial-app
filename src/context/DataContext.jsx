@@ -41,7 +41,7 @@ export const DataProvider = ({children}) => {
             firstName: "Chisom",
             lastName: "Obilor",
             city: "Magodo",
-            type: "customer",
+            type: "vendor",
             text: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim."
         },
         {
@@ -50,7 +50,7 @@ export const DataProvider = ({children}) => {
             firstName: "Adunoluwa",
             lastName: "Adeyemi",
             city: "Iwo Road",
-            type: "customer",
+            type: "vendor",
             text: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim."
         },
         {
@@ -59,7 +59,7 @@ export const DataProvider = ({children}) => {
             firstName: "Chidi",
             lastName: "Okeke",
             city: "Somolu",
-            type: "customer",
+            type: "vendor",
             text: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim."
         },
     ])
