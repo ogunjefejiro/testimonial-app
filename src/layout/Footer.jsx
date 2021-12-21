@@ -6,7 +6,7 @@ const Footer = () => {
         <footer>
             <div className="container">
             <div className="iphone">
-                <img src={iphone} className="phone" alt="" />
+                <img src={iphone} className="phone" alt="iphone" />
                 <div className="opt-in">
                     <div>
                         <h2>Be a member <br></br>of our community 🎉</h2>

@@ -4,7 +4,7 @@ const Testimony = ({testimony}) => {
     const {avatar, firstName, lastName, city, type, text} = testimony
     return (
         <div className="testimony">
-            <img src={avatar} className="avatar" alt="" />
+            <img src={avatar} className="avatar" alt="profile" />
             <h3>{`${firstName} ${lastName}`}</h3>
             {city && <p className="city">{`In ${city}`}</p>}
             <p className={`badge ${type==="vendor"? "vendor" : "" }`}>{type}</p>
